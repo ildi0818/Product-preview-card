@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+body {
+    margin: 0;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+main {
+    margin: auto;
+    max-width: 332px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+[alt~="perfume"] {
+    max-width: 332px;
+    border-radius: 15px 15px 0 0;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+}
+
+p, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+h1, div p:nth-child(1) {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 1.9em;
+}
+
+.uppercaseLetter {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+section {
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+div {
+    display: flex;
+    align-items: center;
+}
+
+div p:nth-child(1) {
+    color: hsl(158, 36%, 37%);
+    margin-right: 15px;
+}
+
+div p:nth-child(2) {
+    text-decoration: line-through;
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+button img {
+    margin-right: 10px;
+}
