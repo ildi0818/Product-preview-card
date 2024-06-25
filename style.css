@@ -86,7 +86,7 @@ button:hover {
 @media screen and (min-width: 376px) { 
     main {
         flex-direction: row;
-        width: 555px;
+        width: 51%;
     }
 
     picture img {
