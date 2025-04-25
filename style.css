@@ -3,64 +3,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
 body {
-    margin: 0;
+    margin: auto;
     background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+
     font-size: 14px;
 }
 
-main {
-    margin: auto;
-    width: 332px;
-    min-height: 100vh;
+.card {
+    max-width: 310px;
+    height: 100%; 
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-/* [alt~="perfume"] */
-picture img {
-    max-width: 332px;
-    border-radius: 15px 15px 0 0;
+.image-mobile {
+    background-image: url(./images/image-product-mobile.jpg);
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-desktop { 
+    background-image: url(./images/image-product-desktop.jpg);         /* asztali nézet */
+    display: none;
 }
 
 p {
-    color: hsl(228, 12%, 48%);
-}
-
-p, button {
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
 }
 
-h1, div p:nth-child(1) {
-    font-family: "Fraunces", serif;
-    font-weight: 900;
-    font-size: 1.9em;
+.text {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    width: 87%;
 }
 
 .uppercaseLetter {
+    font-size: .7em;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin: 0;
 }
 
-section {
-    background-color: hsl(0, 0%, 100%);
-    padding: 20px;
-    border-radius: 0 0 15px 15px;
+h1 {
+    font-size: 1.6rem;
+    /* font-weight: 900; */
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces", serif;
+    margin: 6px 0;    
 }
 
-div {
+.text > p {
+    color: hsl(228, 12%, 48%);
+    line-height: 21px;
+    font-size: .8em;
+}
+
+p, button {
+    font-weight: 500;
+}
+
+.prices {
     display: flex;
     align-items: center;
 }
 
-div p:nth-child(1) {
+.firstPrice {
     color: hsl(158, 36%, 37%);
     margin-right: 15px;
+    font-family: "Fraunces", serif;    
+    /* font-weight: 900; */
+    font-weight: 700;
+    font-size: 1.6rem;
 }
 
-div p:nth-child(2) {
+.secondPrice {
+    color: hsl(228, 12%, 48%);
     text-decoration: line-through;
 }
 
@@ -69,10 +98,11 @@ button {
     color: hsl(0, 0%, 100%);
     border: none;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     width: 100%;
+    font-weight: 600;
 }
 
 button img {
@@ -81,25 +111,54 @@ button img {
 
 button:hover {
     background-color: hsl(212, 21%, 14%);
-}
+} 
 
-@media screen and (min-width: 376px) { 
-    main {
+/* @media screen and (min-width: 535px) {
+    .card {
         flex-direction: row;
-        width: 51%;
+        align-items: normal;
+        position: relative;
+        top: 20%;
+        max-height: 370px;
+        max-width: 490px;
+        margin: auto;
+    } 
+} */
+
+@media screen and (min-width: 376px) {  
+    .image-desktop {
+        background-image: url(./images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 250px;
+        width: 60%;
+        display: block;
+        border-radius: 10px 0 0 10px;
+    }
+    
+    .image-mobile {
+        display: none;
+        background-image: url(./images/image-product-mobile.jpg);
+    } 
+   
+    .card {
+        flex-direction: row;
+        align-items: normal;
+        position: relative;
+        top: 20%;
+        max-height: 435px;
+        max-width: 400px;
+        margin: auto;
+    } 
+    
+    .text {
+        border-radius: 0 10px 10px 0;
+        width: 40%;
     }
 
-    picture img {
-        border-radius: 15px 0 0 15px;
-        height: 416px;
-    }
-
-    section {
-        border-radius: 0 15px 15px 0;
-        min-width: 240px;
-    }
-
-    h1 {
-        margin-right: 33px;
-    }
+    /* h1 {
+        font-size: 1.3rem;
+    } */
 }
+
