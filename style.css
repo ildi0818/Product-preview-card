@@ -125,7 +125,7 @@ button:hover {
     } 
 } */
 
-@media screen and (min-width: 376px) {  
+@media screen and (min-width: 426px) {  
     .image-desktop {
         background-image: url(./images/image-product-desktop.jpg);
         background-repeat: no-repeat;
